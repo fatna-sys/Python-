@@ -6,7 +6,7 @@ from datetime import timedelta,datetime
 
 str_time = "2021-05-27T05:49:24.257+02:00"
 
-#replace the last ':' with an empty string, as python UTC offset format is +HHMM
+#Replace the last ':' with an empty string, as python UTC offset format is +HHMM
 
 str_time = str_time[::-1].replace(':','',1)[::-1]
 
@@ -23,17 +23,17 @@ time -= delta                #reduce the delta from this time object
 
 print(time)
 
-#extracting HH:MM from datetime column
+#Extracting HH:MM from datetime column
 
-#convert from string to datetime
+#Convert from string to datetime
 
 df['date_col'] = pd.to_datetime(df['date_col']) 
 
-#to get date only
+#Get date only
 
 print(df['date_col'].dt.date)
 
-#to get time:
+#Get time:
 
     print(df['date_col'].dt.time)
     
